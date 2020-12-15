@@ -1,0 +1,68 @@
+body, html, form {
+    height: 100%;
+}
+
+main {
+    height: calc(100% - 65px);
+}
+
+.navbar {
+    height: 65px;
+}
+
+h1, h2 {
+    font-family: 'Love Ya Like A Sister';
+}
+
+h1 {
+    font-size: 8vw;
+}
+
+h2 {
+    max-width: 570px;
+    align-self: center;
+    font-size: 5vw;
+}
+
+.images {
+    max-height: 50%;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 1em;
+}
+
+form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 4vw;
+}
+
+button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-self: center;
+}
+
+.choices {
+    width: 90%;
+    max-width: 400px;
+}
+
+ol {
+    align-self: center;
+    text-align: left;
+}
+
+@media (min-width: 617px) {
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 31px;
+    }
+    form {
+        font-size: 25px;
+    }
+}
