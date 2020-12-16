@@ -13,6 +13,7 @@
 
 <body>
 
+    <!-- Navbar contains a timer and a button to view highscores -->
     <header>
         <nav class="navbar bg-light">
             <button type="button" class="btn btn-light" id="view-hs">View Highscores</button>
@@ -21,6 +22,7 @@
     </header>
 
     <main>
+        <!-- Form holds most of the quiz elements that get altered with the user's interaction -->
         <form class="p-2">
             <h1>Animal Quiz Challenge</h1>
             <p>How much do you know about the animal kingdom?</p>
@@ -29,6 +31,9 @@
             src="https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/Animal_kingdom_nzwbda.jpg"
             alt="animal-kingdom-image">
         </form>
+
+        <!-- Audio element for background music -->
+        <audio src="sounds/CircleOfLife.wav" loop></audio>
     </main>
 
     <script src="script.js"></script>
