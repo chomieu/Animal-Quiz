@@ -120,8 +120,8 @@ window.onload = function () {
             window.localStorage.clear()
             document.querySelector("ol").innerHTML = ""
         } else if (et.id === quiz_qa["qa" + qNum][aNum]) {
-            et.setAttribute("style", "background-color: lawngreen")
             playSound("sounds/correct.wav")
+            et.setAttribute("style", "background-color: lawngreen")
             if (qNum !== aNum) {
                 setTimeout(function () {
                     addQuiz()
@@ -133,8 +133,8 @@ window.onload = function () {
             }
         } else if (parseInt(et.id) < aNum) {
             time = time - 10
-            et.setAttribute("style", "background-color: red; color: white")
             playSound("sounds/wrong.wav")
+            et.setAttribute("style", "background-color: red; color: white")
         }
     })
 
