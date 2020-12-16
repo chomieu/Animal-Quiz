@@ -63,7 +63,7 @@ window.onload = function () {
         audio.play()
         addQuiz()
         timer = setInterval(function () {
-            if (time >= 0 && !score) {
+            if (time > 0 && !score) {
                 time--;
                 timerEl.textContent = time;
             } else {
