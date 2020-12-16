@@ -140,13 +140,13 @@ window.onload = function () {
 
     // Displays the result and asks for user's name input
     function result() {
+        clearInterval(timer)
         if (time < 0) {
             score = 0
             timerEl.textContent = 0
         } else {
             score = time
         }
-        clearInterval(timer)
         clearForm()
         h2Cr.textContent = "Your Final Score: " + score
         formEl.appendChild(h2Cr)
