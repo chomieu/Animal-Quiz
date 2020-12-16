@@ -1,17 +1,11 @@
 // Runs the function when the entire page has loaded
 window.onload = function () {
 
-    var audio = document.createElement("audio")
-    audio.setAttribute("src", "sounds/CircleOfLife.wav")
-    audio.loop = true
-    document.querySelector("main").appendChild(audio)
-
-    function playSound(source) {
-        const sX = new Audio(source);
-        sX.play();
-    }
 
     // Object containing quiz questions and answers
+    // Index 0 of each key holds the question
+    // Index 1-4 of each key holds the answers
+    // Index 5 of each key holds the correct choice's ID
     var quiz_qa = {
         qa1: [
             "What does a llama do when it's angry?",
@@ -51,7 +45,7 @@ window.onload = function () {
     }
 
 
-    // The quiz and countdown timer begin when user clicks the start button 
+    // The quiz, background music, and countdown timer begin when user clicks the start button 
     var startEl = document.getElementById("start")
     var timerEl = document.getElementById("timer")
     var timer
@@ -60,7 +54,7 @@ window.onload = function () {
 
     startEl.addEventListener("click", function (e) {
         e.preventDefault()
-        audio.play()
+        document.querySelector("audio").play()
         addQuiz()
         timer = setInterval(function () {
             if (time > 0 && !score) {
@@ -105,6 +99,13 @@ window.onload = function () {
     }
 
 
+    // Plays sound effect from a given source
+    function playSound(source) {
+        const sX = new Audio(source);
+        sX.play();
+    }
+
+    
     // Checks which button is pressed via ID
     // backBtn reloads the Start Quiz page
     // clearBtn clears the local storage
@@ -121,7 +122,7 @@ window.onload = function () {
         } else if (et.id === quiz_qa["qa" + qNum][aNum]) {
             et.setAttribute("style", "background-color: lawngreen")
             playSound("sounds/correct.wav")
-            if (qNum !== 5) {
+            if (qNum !== aNum) {
                 setTimeout(function () {
                     addQuiz()
                 }, 500)
@@ -140,6 +141,7 @@ window.onload = function () {
 
     // Displays the result and asks for user's name input
     function result() {
+        clearForm()
         clearInterval(timer)
         timerEl.textContent = 0
         if (time < 0) {
@@ -147,14 +149,16 @@ window.onload = function () {
         } else {
             score = time
         }
-        clearForm()
+        // Score
         h2Cr.textContent = "Your Final Score: " + score
         formEl.appendChild(h2Cr)
+        // Name input
         var inputCr = document.createElement("input")
         inputCr.setAttribute("placeholder", "Enter Your Name")
         inputCr.setAttribute("class", "text-center align-self-center choices")
         inputCr.setAttribute("id", "nameInput")
         formEl.appendChild(inputCr)
+        // Submit button
         var submitCr = document.createElement("button")
         submitCr.textContent = "Submit"
         submitCr.setAttribute("class", "btn btn-warning m-3")
@@ -177,19 +181,22 @@ window.onload = function () {
     function viewHighScore() {
         h2Cr.textContent = "Highscores"
         formEl.appendChild(h2Cr)
+        formEl.appendChild(document.createElement("ol"))
+        // Retrieves keys and values from local storage, then insert the list into the ol tag
         var names = Object.keys(localStorage)
         var scores = Object.values(localStorage)
-        formEl.appendChild(document.createElement("ol"))
         for (i = 0; i < names.length; i++) {
             var item = document.createElement("li")
             item.textContent = names[i] + " - " + scores[i]
             document.querySelector("ol").appendChild(item)
         }
+        // Back button
         var backCr = document.createElement("button")
         backCr.textContent = "Go Back"
         backCr.setAttribute("class", "btn btn-warning")
         backCr.setAttribute("id", "backBtn")
         formEl.appendChild(backCr)
+        // Clear highscores button
         var clearCr = document.createElement("button")
         clearCr.textContent = "Clear Highscores"
         clearCr.setAttribute("class", "btn btn-warning m-3")
