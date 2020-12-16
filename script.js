@@ -1,6 +1,16 @@
 // Runs the function when the entire page has loaded
 window.onload = function () {
 
+    var audio = document.createElement("audio")
+    audio.setAttribute("src", "sounds/CircleOfLife.wav")
+    audio.loop = true
+    document.querySelector("main").appendChild(audio)
+
+    function playSound(source) {
+        const sX = new Audio(source);
+        sX.play();
+    }
+
     // Object containing quiz questions and answers
     var quiz_qa = {
         qa1: [
@@ -50,9 +60,10 @@ window.onload = function () {
 
     startEl.addEventListener("click", function (e) {
         e.preventDefault()
+        audio.play()
         addQuiz()
         timer = setInterval(function () {
-            if (time && !score) {
+            if (time >= 0 && !score) {
                 time--;
                 timerEl.textContent = time;
             } else {
@@ -109,6 +120,7 @@ window.onload = function () {
             document.querySelector("ol").innerHTML = ""
         } else if (et.id === quiz_qa["qa" + qNum][aNum]) {
             et.setAttribute("style", "background-color: lawngreen")
+            playSound("sounds/correct.wav")
             if (qNum !== 5) {
                 setTimeout(function () {
                     addQuiz()
@@ -121,13 +133,19 @@ window.onload = function () {
         } else if (parseInt(et.id) < aNum) {
             time = time - 10
             et.setAttribute("style", "background-color: red; color: white")
+            playSound("sounds/wrong.wav")
         }
     })
 
 
     // Displays the result and asks for user's name input
     function result() {
-        score = time
+        if (time < 0) {
+            score = 0
+            timerEl.textContent = 0
+        } else {
+            score = time
+        }
         clearInterval(timer)
         clearForm()
         h2Cr.textContent = "Your Final Score: " + score
