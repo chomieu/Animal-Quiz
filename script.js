@@ -141,9 +141,9 @@ window.onload = function () {
     // Displays the result and asks for user's name input
     function result() {
         clearInterval(timer)
+        timerEl.textContent = 0
         if (time < 0) {
             score = 0
-            timerEl.textContent = 0
         } else {
             score = time
         }
