@@ -1,5 +1,5 @@
 # Code-Quiz
-<p> An interactive quiz that utilizes timer and local storage to track user's performance.</p>
+<p> An interactive quiz that utilizes a timer and local storage to track users' performance.</p>
 
 ## Preview:
 1. Start screen <img alt="quiz-start-screen" src="https://i.imgur.com/dtTsdCU.png">
