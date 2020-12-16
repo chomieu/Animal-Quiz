@@ -1,29 +1,40 @@
+/* Sets 100% height for the body, html, and form tags  */
 body, html, form {
     height: 100%;
 }
 
+/* Removes 65px extra space created by the navbar so the page fits perfectly with any screen height */
 main {
     height: calc(100% - 65px);
 }
 
+/* Navbar is exactly 65px to allow for easy screen adjustments */
 .navbar {
     height: 65px;
 }
 
+/* Nice looking Google Font for h1 and h2 tags */
 h1, h2 {
     font-family: 'Love Ya Like A Sister';
 }
 
+/* h1 font size changes with the screen width */
 h1 {
     font-size: 8vw;
 }
 
+/* h2 font size also changes with the screen width */
 h2 {
     max-width: 570px;
-    align-self: center;
     font-size: 5vw;
 }
 
+/* Aligns h2, button, and ol tags to the center */
+h2, button, ol {
+    align-self: center;
+}
+
+/* Controls the size of .images class */
 .images {
     max-height: 50%;
     width: 100%;
@@ -31,6 +42,7 @@ h2 {
     margin-bottom: 1em;
 }
 
+/* Arrages elements inside the form tag */
 form {
     margin: 0 auto;
     display: flex;
@@ -40,21 +52,18 @@ form {
     font-size: 4vw;
 }
 
+/* Different font family for buttons */
 button {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    align-self: center;
 }
 
+/* Sets the width for each answer choice */
 .choices {
     width: 90%;
     max-width: 400px;
 }
 
-ol {
-    align-self: center;
-    text-align: left;
-}
-
+/* Overides the font size of h1, h2, and form elements once the screen is at least 617px wide */
 @media (min-width: 617px) {
     h1 {
         font-size: 50px;
