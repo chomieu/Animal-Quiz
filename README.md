@@ -19,4 +19,6 @@
 [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
 
 ## Contact
-[![Github](./Assets/images/github.png)](https://github.com/chomieu) | [![LinkedIn](./Assets/images/linkedin.png)](https://www.linkedin.com/in/chomieu/) |
+Chomie Usaneerungrueng
+[![Github](./Assets/images/github.png)](https://github.com/chomieu)
+[![LinkedIn](./Assets/images/linkedin.png)](https://www.linkedin.com/in/chomieu/)
