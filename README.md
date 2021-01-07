@@ -14,3 +14,9 @@
 ![javascript](https://img.shields.io/badge/javascript-67.6%25-yellow)
 ![html](https://img.shields.io/badge/html-17.6%25-blue)
 ![css](https://img.shields.io/badge/css-14.8%25-red)
+
+## License
+[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
+
+## Contact
+[![Github](./Assets/images/github.png)](https://github.com/chomieu) | [![LinkedIn](./Assets/images/linkedin.png)](https://www.linkedin.com/in/chomieu/) |
