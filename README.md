@@ -9,3 +9,8 @@
 
 ## Link:
 <https://chomieu.github.io/Code-Quiz/>
+
+## Technologies
+![javascript](https://img.shields.io/badge/javascript-67.6%25-yellow)
+![html](https://img.shields.io/badge/html-17.6%%25-blue)
+![css](https://img.shields.io/badge/css-14.8%%25-red)
