@@ -20,5 +20,5 @@
 
 ## Contact
 Chomie Usaneerungrueng
-[![Github](./Assets/images/github.png)](https://github.com/chomieu)
-[![LinkedIn](./Assets/images/linkedin.png)](https://www.linkedin.com/in/chomieu/)
+[![Github](https://i.imgur.com/1c0aVK2.png)](https://github.com/chomieu)
+[![LinkedIn](https://i.imgur.com/mtOoqnh.png)](https://www.linkedin.com/in/chomieu/)
