@@ -19,6 +19,6 @@
 [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
 
 ## Contact
-<chomieu@gmail.com> <br>
+<p> <chomieu@gmail.com> </p> <br>
 [![Github](https://i.imgur.com/1c0aVK2.png)](https://github.com/chomieu)
 [![LinkedIn](https://i.imgur.com/mtOoqnh.png)](https://www.linkedin.com/in/chomieu/)
