@@ -16,7 +16,7 @@
 ![css](https://img.shields.io/badge/css-14.8%25-red)
 
 ## License
-[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
+[MIT](./LICENSE) License
 
 ## Contact
 <chomieu@gmail.com> <br><br>
