@@ -1,4 +1,4 @@
-# Code-Quiz
+# Animal-Quiz
 <p> An interactive quiz that utilizes a timer and local storage to track users' performance.</p>
 
 ## Preview
