@@ -8,7 +8,7 @@
 4. Highscores screen <img alt="quiz-highscores-screen" src="https://i.imgur.com/zna7e1U.png">
 
 ## Link
-<https://chomieu.github.io/Code-Quiz/>
+<https://chomieu.github.io/Animal-Quiz/>
 
 ## Technologies
 ![javascript](https://img.shields.io/badge/javascript-67.6%25-yellow)
